@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="div">
+    <p id="div1" class="one" name="nameone">div1</p>
+    <div id="div2" name="div2">div2</div>
+    <div id="div3" name="div3">div3</div>
+    <div id="div4" data-aa="444" data-bb='555'></div>
+  </div>
+  <script>
+    // const live = document.getElementsByTagName('p');
+    // console.log(live[0].innerHTML); // 输出 div1
+    // document.getElementById('div').removeChild(document.getElementById('div1'));
+    // console.log(live[0].innerHTML); // Uncaught TypeError: Cannot read property 'innerHTML' of undefined
+
+    // const live = document.getElementsByName("div2");
+    // console.log(live[0].innerHTML); // div2
+    // document.getElementById("div").removeChild(document.getElementById("div2"));
+    // console.log(live[0].innerHTML); // Uncaught TypeError: Cannot read property 'innerHTML' of undefined
+    //
+    // const live = document.getElementsByClassName("one");
+    // console.log(live[0].innerHTML); // div2
+    // document.getElementById("div").removeChild(document.getElementById("div1"));
+    // console.log(live[0].innerHTML); // Uncaught TypeError: Cannot read property 'innerHTML' of undefined
+    // const dataList = document.getElementById('div4').dataset;
+    // console.log(dataList);
+    // document.getElementById('div4').dataset.cc = '666';
+    // console.log(dataList);
+    // const div2 = document.getElementById('div2');
+    // div2.addEventListener('click', fuc2, false);
+    // div2.addEventListener('click', fuc, true);
+    // function fuc() {
+    //   console.log('addEventListener - true');
+    // }
+    // function fuc2() {
+    //   console.log('addEventListener - false');
+    // }
+
+    // const cloneHtml = div2.cloneNode(true);
+    // cloneHtml.id = 'div5';
+    // document.getElementById('div').appendChild(cloneHtml);
+
+    // const div2 = document.getElementById('div2');
+    // div2.addEventListener('click', fuc, true);
+    // function fuc() {
+    //   console.log('addEventListener - true');
+    // }
+    // div2.removeEventListener('click', fuc, true);
+    // const div2 = document.getElementById('div2');
+    // div2.addEventListener('click', function() {
+    //   console.log('add');
+    //   console.log(this);
+    // }, true);
+    // div2.removeEventListener('click', function() {
+    //   console.log('remove');
+    // }, true);
+    // const div2 = document.getElementById('div2');
+    // let result = '';
+    // if (window.getComputedStyle) {
+    //   result = (window || document.defaultView).getComputedStyle(div2, null);
+    // } else {
+    //   result = div2.currentStyle;
+    // }
+
+    // console.log(result);
+    const div2 = document.getElementById('div2');
+    const res1 = div2.getClientRects();
+    const res2 = div2.getBoundingClientRect();
+
+    console.log(res1);
+    console.log(res2);
+  </script>
+</body>
+</html>
